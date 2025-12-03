@@ -1,53 +1,54 @@
 <html>
 	<head>
 		<title>Evaluare U2 - Soica Alex</title>
-		<style>
-		table, th, td {
-        border: 1px solid black;
-        }
-		</style>
+		<link rel="stylesheet" href="style.css">
+		<script src="script.js" defer></script>
 	</head>
 	<body>
-		<div>
-		<h1 id="numeprenume">Nume si prenume: Soica Alex-Catalin</h1>
-		<h2 id="datecontact">Date contact: soica.ne.alex@student.utcluj.ro</h2>
+		<div class="numeprenume">
+			<h1 id="numeprenume"><font face="arial" size="25" color="gray">Nume si prenume: Soica Alex-Catalin</font></h1>
 		</div>
+			<h2 id="datecontact">Date contact: <a href="mailto:soica.ne.alex@student.utcluj.ro">soica.ne.alex@student.utcluj.ro</a></h2>
 		<br>
-		<h1>Componente si caracteristici</h1>
+			<h3>Specificatii tehnice ale statiei principale de lucru</h3>
 		<br>
-		<table border-color="black">
+		<table>
 		<tr>
-		    <th class="align-center">Denumire</th>
-			<th class="align-center">Producator</th>
+		    <th class="align-center">Denumire componenta</th>
 			<th class="align-center">Parametri</th>
+			<th class="align-center">Producator</th>
 		</tr>
 		<tr>
-		    <td class="align-center"></td>
-			<td class="align-center"></td>
-			<td class="align-center"></td>
+		    <td class="align-center">Procesor: Intel Core i5-12600HX</td>
+			<td class="align-center">12 nuclee <br> 16 threads</td>
+			<td class="align-center">Producator: Intel</td>
 		</tr>
 		<tr>
-		    <td class="align-center"></td>
-			<td class="align-center"></td>
-			<td class="align-center"></td>
+		    <td class="align-center">GPU: NVIDIA GeForce RTX 4050</td>
+			<td class="align-center">6GB GDDR6 <br> Boost Clock: ~2370MHz</td>
+			<td class="align-center">Producator: NVIDIA</td>
 		</tr>
 		<tr>
-		    <td class="align-center"></td>
-			<td class="align-center"></td>
-			<td class="align-center"></td>
-		</tr>
-		<tr>
-		    <td class="align-center"></td>
-			<td class="align-center"></td>
-			<td class="align-center"></td>
-		</tr>
-		<tr>
-		    <td class="align-center"></td>
-			<td class="align-center"></td>
-			<td class="align-center"></td>
+		    <td class="align-center">SSD:Samsung MZAMX1T0HCLD-00BL2</td>
+			<td class="align-center">Viteza scriere: ~4700MB/s <br> Viteza citire: ~3700MB/s</td>
+			<td class="align-center">Producator: Samsung</td>
 		</tr>
 		</table>
 		<br>
-		<h2 id="structura">Structura retelei:</h2>
+		<div class="structuracaracteristici">
+			<h3>Structura retelei personale si accesul la internet</h3>
+			<img id="rounded-img" src="images\diagpersretea.png" width="250" height="250">
+			<h3>Caracteristicile conexiunii la retea</h3>
+			<ol type="a">
+				<li>Adresa MAC:<br> - Este folosita pentru recunoasterea dispozitivelor;<br> - Are forma hexazecimala de tipul 00:1A:2B:3C:4D:5E.</li>
+				<li>Adresa IP:<br> - Este adresa logica a dispozitivului in retea sau pe internet;<br> - Poate fi statica(setata manual) sau dinamica(setata automat).</li>
+				<li>Debit la download:<br> - Este viteza cu care datele sunt primite de dispozitiv;<br> - Se masoara in Mbps.</li>
+				<li>Debit la upload:<br> - Este viteza cu care datele sunt trimise de dispozitiv;<br> - Se masoara tot in Mbps.</li>
+			</ol>
+		</div>
+		<br>
+		<h3 id="doubleclick">Utilizarea resurselor (Dublu click aici)</h3>
+		<img src="images\utilresurselor.png" width="400" height="400">
+		
 </body>
 </html>
