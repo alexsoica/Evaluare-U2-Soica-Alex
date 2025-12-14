@@ -11,30 +11,29 @@ const slides = [
 	{img: "images/poza4.png"}
 ];
 
-let current = 0;
-const delay = 3000;
+document.addEventListener('DOMContentLoaded', function() {
+            const triggerImage = document.getElementById('trigger-image');
+            const slides = document.querySelectorAll('.slide');
+            let currentSlideIndex = 0;
+            let slideshowInterval;
 
-const container = document.createElement('div');
-document.body.appendChild(container);
+            function showNextSlide() {
+                slides[currentSlideIndex].classList.remove('active');
+                
+                currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+                
+                slides[currentSlideIndex].classList.add('active');
+            }
 
-img.width = 300;
-img.height = 300;
-img.style.borderRadius = "8px";
-img.style.cursor = "pointer";
-img.style.transition = "opacity 0.5s";
+            triggerImage.addEventListener('dblclick', function() {
+                console.log("Double-click detected. Starting slideshow...");
 
-function showSlide(index) {
-  img.style.opacity = 0;
-  setTimeout(() => {
-    link.href = slides[index].link;
-    img.src = slides[index].img;
-    img.style.opacity = 1;
-  }, 250);
-}
+                triggerImage.classList.add('hidden');
 
-showSlide(current);
+                slides[currentSlideIndex].classList.add('active');
 
-setInterval(() => {
-  current = (current + 1) % slides.length;
-  showSlide(current);
-}, delay);
+					if (slideshowInterval) clearInterval(slideshowInterval);
+                slideshowInterval = setInterval(showNextSlide, 3000);
+            });
+        });
+this.classList.add('show');
